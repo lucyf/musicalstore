@@ -1,0 +1,19 @@
+[
+    {"brand": [
+        {"id": 1, "name": "Roland"},
+        {"id": 2, "name": "Yamaha"},
+        {"id": 3, "name": "Casio"},
+        {"id": 4, "name": "Alesis"},
+        {"id": 5, "name": "Korg"}]    
+    },
+    {"keys": [
+        {"id": 1, "number": 61 },
+        {"id": 2, "number": 76 },
+        {"id": 3, "number": 88 }]    
+    },
+    {"tunes": [
+        {"id": 1, "tunes": 100 },
+        {"id": 2, "tunes": 400 },
+        {"id": 3, "tunes": 600 }]  
+    }
+]

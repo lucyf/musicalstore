@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="negocio, musica, pianos, teclados, pianos digitales, buenos aires">
+        <meta name="author" content="">
+        <title>Teorema Music</title>
+        <!--Bootstrap stylesheet-->
+        <link defer rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:ital,wght@0,300;0,400;1,500&display=swap" rel="stylesheet">
+        <!--Links-->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script defer src="scripts/products.js"></script>        
+        <script defer src="scripts/shoppingcart.js"></script>
+        <script defer src="scripts/filtersapp.js"></script>
+        <script defer src="scripts/modals.js"></script>
+        <script defer src="scripts/app.js"></script>
+    </head>
+    <body class=" body m-3">
+    <div class="container-fluid">
+    <header>
+    <!-- Nav -->
+    <!--Logo-->
+     <div class=" header row m-auto justify-content-left align-items-top">   
+        <div class="col-2 p-0">
+        <nav class="navbar">
+          <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" width="120px" height="auto" class="d-inline align-top" alt="logo" loading="lazy">
+          </a>
+        </nav>
+        </div>
+    <!--/Logo-->
+    <!--Search-->
+        <form action="" id="form-search" class="col">
+            <div class= " input-group mt-3 mb-3 d-inline-flex">
+                    <input id="search-box-input" class="form-control search mr-2 pl-2" type="search" placeholder="Busqueda" aria-label="Search" value="">
+                    <button id="search-button" class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="images/buscar.svg" width="20px" height="auto" alt="Search"></button>
+            </div>
+        </form>
+    <!--/Search-->
+    <!--Nav Right-->
+        <div id="nav-contact" class=" nav-contact col-2 d-flex justify-content-right align-items-center mr-4 mt-3 ">
+            <a href="#" id="contacto" class="nav-link">CONTACTO</a>
+            <a href="#" class="nav-link"><img src="images/facebook.svg" alt="" width="30px"></a>
+            <a href="#" class="cartlogo"><img src="images/instagram.svg" alt="" width="30px"></a>
+        </div>
+        <!--/Nav Right-->
+     </div>
+        <!--/Nav -->
+    </header>
+        <!--Page Body-->
+        <section id="pagebody">
+
+            <div id="search-msg" class="row mt-3 ml-3">
+                <p><strong><span id="search-number"></span></strong> resultados de la busqueda <strong><span id="search-key"></span></strong></p>
+            </div>
+            <div class="row d-flex mr-1 ml-1 mt-3 mb-5 align-items-top">
+                <div id="filters-col" class="col mt-3 p-3 filters">
+                </div>
+                <div id="items" class="col-8 products p-3"> 
+                        <!--Dropdown Ordenar por-->
+                        <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Ordenar por
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#" onclick="lowerPriceFilter()">Menor Precio</a>
+                        <a class="dropdown-item" href="#" onclick="higherPriceFilter()">Mayor Precio</a>
+                        </div>
+                        </div>
+                    <!--/Dropdown Ordenar por-->
+                        <div id="productcards" class="row mt-3 align-items-center justify-content-center">
+                        </div>
+                    </div>
+                    <div id="cart-box" class="col-2 mt-3 cartBox p-3">
+                    </div>
+                    <div id="modal-box">
+                    </div>
+                    <div id="final-sale"></div>
+            </div>
+            </section>
+        <!--/Page Body-->
+        <footer class="footer ml-3">
+            <div class="row">
+            <i><img src="/images/whatsapp.svg" alt="whatsapp" width="20px"></i>
+            <a class="p-2" href="#">1555111111</a>
+            </div>
+            <div class="">
+                <i>
+                    <img class="p-1" src="/images/mapa.svg" width="20px" alt="telefono"/>
+                </i>
+                <a href="https://goo.gl/maps/mLS7TAWfdS3wq7nv7"> Boulogne Sur Mer 120, B1617CED Gran Buenos Aires, Buenos Aires</a>
+            </div>
+        </footer>
+        <!--Archivo JS-->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </body>
+</div>
+</html>

@@ -1,0 +1,30 @@
+[ 
+    {
+        "id" : "CasioWk240",
+        "title" : "CASIO WK240",
+        "description" : "Teclado digital 61 teclas sensitivas, full-size con 600 tonos incorporados",
+        "price" : 34000 ,
+        "img" : "images/casio.jpg"
+    },
+    {
+        "id" : "Roland Go",
+        "title" : "Roland Go:Keys",
+        "description" : "Teclado digital 61 teclas sensitivas, full-size con 600 tonos incorporados",
+        "price" : 70000,
+        "img" : "images/roland.jpg"
+    },
+    {
+        "id" : "Yamaha Np32",
+        "title" : "Yamaha Np32",
+        "description" : "Teclado digital 76 teclas sensitivas, full-size con 10 sonidos incorporados",
+        "price" : 100000,
+        "img" : "images/yamaha.jpg"
+    },
+    {
+        "id" : "Alesis Recital61",
+        "title" : "Alesis Recital 61",
+        "description" : "Teclado digital 61 teclas sensitivas, full-size con 100 sonidos incorporados",
+        "price" : 40000,
+        "img" : "images/alesis-recital-61-2.jpg"
+    }
+]
