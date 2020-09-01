@@ -61,7 +61,7 @@ buildHtmlFilter = function(filter) {
     }
            
     function getFiltersList(){
-        var urlLocal = 'http://127.0.0.1:8080/data/filters.json'
+        var urlLocal = 'data/filters.json'
     
         $.ajax({
             method: "GET",
