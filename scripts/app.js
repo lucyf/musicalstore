@@ -59,7 +59,7 @@ function emptyCart(){
 
 function getProductList(){
     
-    var urlLocal = 'http://127.0.0.1:8080/data/data.json'
+    var urlLocal = 'https://files.000webhost.com/public_html/data/data.json'
     
         $.ajax({
             method: "GET",
