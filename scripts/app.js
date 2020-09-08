@@ -13,6 +13,9 @@ var shipping;
 var secondForm;
 var thidForm;
 var finishBtn;
+var price;
+var cartButtons;
+var msgCart;
 
 function clearLocalStorageRefresh(){
     localStorage.clear();
@@ -22,6 +25,13 @@ function lessProduct(id) {
     var productSelection = products.getById(id)[0];
     totalPrice = totalPrice - productSelection.price;
     shoppingCart.remove(id);
+    if(totalPrice === 0){
+        $('#msg-empty-cart').show();
+        $('#price').hide();
+        $('#cartButtons').hide();
+    }else{
+        $('#msg-empty-cart').hide();
+    }
     
   }
 
@@ -49,6 +59,10 @@ function setSearchKey(key, resultLength) {
 function addToCart(id){
     var productSelection = products.getById(id)[0];
     shoppingCart.add(productSelection);
+    $('#msg-empty-cart').hide();
+    price.show('slow');
+    cartButtons.show();
+
 }
 
 
@@ -73,6 +87,11 @@ function getProductList(){
         })
     }
 
+    function contactPage(){
+        $('#principal-page').hide();
+        $('#contact-page').html(buildContactPage());
+    }
+
 
 $(document).ready(()=> {
     
@@ -83,10 +102,13 @@ $(document).ready(()=> {
     
     searchMsg = $("#search-msg").hide();
     
-    
     shoppingCart = new ShoppingCart();
     shoppingCart.populate();
     shoppingCart.buildCart('cart-box');
+    price = $('#price').hide();
+    cartButtons = $('#cartButtons').hide();
+    msgCart = $('#msg-empty-cart');
+   
    
     buildModals();
     shipping = $('#shipping').hide();

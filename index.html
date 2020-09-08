@@ -13,6 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:ital,wght@0,300;0,400;1,500&display=swap" rel="stylesheet">
         <!--Links-->
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script defer src="scripts/contact.js"></script>  
         <script defer src="scripts/products.js"></script>        
         <script defer src="scripts/shoppingcart.js"></script>
         <script defer src="scripts/filtersapp.js"></script>
@@ -42,22 +43,23 @@
         </form>
     <!--/Search-->
     <!--Nav Right-->
-        <div id="nav-contact" class=" nav-contact col-2 d-flex justify-content-right align-items-center mr-4 mt-3 ">
-            <a href="#" id="contacto" class="nav-link">CONTACTO</a>
-            <a href="#" class="nav-link"><img src="images/facebook.svg" alt="" width="30px"></a>
-            <a href="#" class="cartlogo"><img src="images/instagram.svg" alt="" width="30px"></a>
+        <div id="nav-contact" class=" nav-contact col-2 d-flex justify-content-right align-items-center mr-4 p-0 ">
+            <a href="index.html" id="contacto" class="nav-link p-1">Home</a>
+            <a href="#" onclick="contactPage()" id="contacto" class="nav-link p-1">Contacto</a>
+            <a href="#" class=" p-2"><img src="images/facebook.svg" alt="" width="25px"></a>
+            <a href="#" class="p-2"><img src="images/instagram.svg" alt="" width="25px"></a>
         </div>
         <!--/Nav Right-->
      </div>
         <!--/Nav -->
     </header>
         <!--Page Body-->
-        <section id="pagebody">
-
+    <section id="pagebody">
+        <div id="principal-page">
             <div id="search-msg" class="row mt-3 ml-3">
                 <p><strong><span id="search-number"></span></strong> resultados de la busqueda <strong><span id="search-key"></span></strong></p>
             </div>
-            <div class="row d-flex mr-1 ml-1 mt-3 mb-5 align-items-top">
+            <div id="" class="row d-flex mr-1 ml-1 mt-3 mb-5 align-items-top">
                 <div id="filters-col" class="col mt-3 p-3 filters">
                 </div>
                 <div id="items" class="col-8 products p-3"> 
@@ -80,19 +82,32 @@
                     </div>
                     <div id="final-sale"></div>
             </div>
-            </section>
+        </div>
+            <div id="contact-page"></div>
+    </section>
         <!--/Page Body-->
-        <footer class="footer ml-3">
-            <div class="row">
-            <i><img src="/images/whatsapp.svg" alt="whatsapp" width="20px"></i>
-            <a class="p-2" href="#">1555111111</a>
+     <footer class="footer ml-2">
+        <div class="row">
+            <div class="col-4 align-items-center">
+                <h5 id="contact-us" class="m-2">Contactanos</h5>
+             <div class="m-1">
+                <i><img src="/images/whatsapp.svg" alt="whatsapp" width="20px"></i>
+                 <a class="p-2 text-footer" href="#">1555111111</a>
+             </div>
+             <div class="m-1">
+                <i><img src="/images/email.svg" alt="whatsapp" width="20px"></i>
+                 <a class="p-2 text-footer" href="#">teoremamusical@example.com</a>
+             </div>
+             <p id="note" class="">*Todos los datos de contacto son ficticios, a modo de ilustración.</p>
             </div>
-            <div class="">
-                <i>
-                    <img class="p-1" src="/images/mapa.svg" width="20px" alt="telefono"/>
-                </i>
-                <a href="https://goo.gl/maps/mLS7TAWfdS3wq7nv7"> Boulogne Sur Mer 120, B1617CED Gran Buenos Aires, Buenos Aires</a>
-            </div>
+             <div class="col-6 m-1">
+                <div class="mb-3 align-items-center">
+                <i><img class="p-1" src="/images/mapa.svg" width="30px" alt="mapa"/></i>
+                <a href="https://goo.gl/maps/mLS7TAWfdS3wq7nv7" class="text-footer" id="adress"> Boulogne Sur Mer 120, B1617CED Gran Buenos Aires, Buenos Aires</a>
+                </div>
+                <iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.684683751329!2d-58.52320798476807!3d-34.687906780437814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc8cff2220f8b%3A0xdaa23699cae11f56!2sAv.%20Boulogne%20Sur%20Mer%20120%2C%20B1766FXB%20La%20Tablada%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1599504863137!5m2!1ses-419!2sar" width="500" height="100" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+             </div>
+        </div>
         </footer>
         <!--Archivo JS-->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"

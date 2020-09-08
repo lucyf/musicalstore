@@ -43,7 +43,7 @@ function ShoppingCart() {
     this.buildList = function() {
         var html = '';
         this.cart.forEach(product => {
-            html = html + ` <div class="row align-items-top">
+            html = html + ` <div class="row align-items-center">
                             <li class="col p-1 m-1"><strong>${ product.title }</strong></li>
                             <li class="col p-1 m-1">$${ product.price }</li>
                             <li><button type="button" class="close" aria-label="Close" onclick="lessProduct('${product.id}')">
@@ -60,18 +60,21 @@ function ShoppingCart() {
         container.innerHTML = "";
         var html = `
             <div class="cart justify-content-center">
-                <h3 id="cartHeading" class="ppalheadings">Carrito de Compras (${this.cart.length})</h3>
-                <div id="shop-selection" class="row align-items-top">
-                <ul class= "list justify-content-right">
+                <h3 id="cartHeading" class="ppalheadings text-center p-1 m-1">Carrito de Compras (${this.cart.length})</h3>
+                <div id="shop-selection" class="row justify-content-center">
+                <ul class= "list p-0">
                      ${ this.buildList()}
                 </ul>
-                <div id="total-price" class=" total-price row m-3 p-0 align-items-center justify-content-center">
+                <div id="msg-empty-cart">
+                <p class="text-center">Aún no tienes nada cargado en el carrito. Selecciona algún producto.</p>
+                </div>
+                <div id="price" class="row m-3 p-0 align-items-center justify-content-center">
                 <li class=" list p-1 m-1"><h6><strong>Total: </strong></h3></li>
                 <li class=" list p-1"><h6 id="total-price">$${totalPrice}</h6></li>
                 </div>
-                <div class="cartButtons d-flex align-items-center justify-content-center">
+                <div id="cartButtons" class="cartButtons align-items-center justify-content-center">
                 <button id="cancel-btn" type="button" class="btn btn-link cancel p-1 m-1" value="" onclick="emptyCart()">Cancelar</button>
-                <button id="comprar" type="button" class="btn btn-dark p-1 m-1" data-toggle="modal" data-target="#staticBackdrop">COMPRAR</button>
+                <button id="comprar" type="button" class="btn btn-warning p-1 m-1" data-toggle="modal" data-target="#staticBackdrop">COMPRAR</button>
                 </div>
             </div>   
         `

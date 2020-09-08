@@ -14,11 +14,11 @@ function Products() {
 
     this.buildHtmlProduct = function(product) {
         return `
-            <div id="products-list" class="card col-4 p-1 m-1"  style="width: 30rem;">
+            <div id="products-list" class="card col-3 p-1 m-1"  style="width: 30rem;">
                 <img src="${product.img}" class="card-img-top" alt="">
                 <div class="card-body p-1">
                     <h5 class="card-title">${product.title}</h5>
-                    <h6 class="price">$${product.price}</h6>
+                    <h6 class="p-price">$${product.price}</h6>
                     <p class="card-text">${product.description}</p>
                     <div class="row align-items-center justify-content-center m-2">
                     <a href="#" id="comprar-ya" class="btn btn-warning p-1 m-1 col" value="" onclick="addToCart('${product.id}')">COMPRAR YA</a>
