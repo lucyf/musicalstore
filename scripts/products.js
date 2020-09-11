@@ -14,7 +14,7 @@ function Products() {
 
     this.buildHtmlProduct = function(product) {
         return `
-            <div id="products-list" class="card col-3 p-1 m-1"  style="width: 30rem;">
+            <div id="products-list" class="card col-8 col-md-4 p-1 m-1"  style="width: 30rem;">
                 <img src="${product.img}" class="card-img-top" alt="">
                 <div class="card-body p-1">
                     <h5 class="card-title">${product.title}</h5>

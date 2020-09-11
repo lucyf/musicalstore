@@ -20,34 +20,34 @@
         <script defer src="scripts/modals.js"></script>
         <script defer src="scripts/app.js"></script>
     </head>
-    <body class=" body m-3">
+    <body class=" body m-3 m-md-3 m-xl-3">
     <div class="container-fluid">
     <header>
     <!-- Nav -->
     <!--Logo-->
-     <div class=" header row m-auto justify-content-left align-items-top">   
+     <div class=" header row mt-3 mb-3 justify-content-left align-items-center">   
         <div class="col-2 p-0">
         <nav class="navbar">
           <a class="navbar-brand" href="index.html">
-          <img src="images/logo.png" width="120px" height="auto" class="d-inline align-top" alt="logo" loading="lazy">
+          <img id="logo-header" src="images/logo.png" width="120px" height="auto" class="d-inline align-top" alt="logo" loading="lazy">
           </a>
         </nav>
         </div>
     <!--/Logo-->
     <!--Search-->
         <form action="" id="form-search" class="col">
-            <div class= " input-group mt-3 mb-3 d-inline-flex">
+            <div class= " input-group d-inline-flex align-items-center">
                     <input id="search-box-input" class="form-control search mr-2 pl-2" type="search" placeholder="Busqueda" aria-label="Search" value="">
                     <button id="search-button" class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="images/buscar.svg" width="20px" height="auto" alt="Search"></button>
             </div>
         </form>
     <!--/Search-->
     <!--Nav Right-->
-        <div id="nav-contact" class=" nav-contact col-2 d-flex justify-content-right align-items-center mr-4 p-0 ">
-            <a href="index.html" id="contacto" class="nav-link p-1">Home</a>
+        <div id="nav-contact" class=" nav-contact col-4 col-md-2 d-flex justify-content-right align-items-center p-0 ">
+            <a href="index.html" id="home" class="nav-link p-1">Home</a>
             <a href="#" onclick="contactPage()" id="contacto" class="nav-link p-1">Contacto</a>
-            <a href="#" class=" p-2"><img src="images/facebook.svg" alt="" width="25px"></a>
-            <a href="#" class="p-2"><img src="images/instagram.svg" alt="" width="25px"></a>
+            <a href="#" class="social-media p-1"><img src="images/facebook.svg" alt="" width="25px"></a>
+            <a href="#" class=" social-media p-1"><img src="images/instagram.svg" alt="" width="25px"></a>
         </div>
         <!--/Nav Right-->
      </div>
@@ -60,9 +60,9 @@
                 <p><strong><span id="search-number"></span></strong> resultados de la busqueda <strong><span id="search-key"></span></strong></p>
             </div>
             <div id="" class="row d-flex mr-1 ml-1 mt-3 mb-5 align-items-top">
-                <div id="filters-col" class="col mt-3 p-3 filters">
+                <div id="filters-col" class="col-xl col-3 col-md-2 mt-3 p-3 filters">
                 </div>
-                <div id="items" class="col-8 products p-3"> 
+                <div id="items" class="col-xl-8 col-6 col-md-7 products p-3"> 
                         <!--Dropdown Ordenar por-->
                         <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Ordenar por
@@ -76,7 +76,7 @@
                         <div id="productcards" class="row mt-3 align-items-center justify-content-center">
                         </div>
                     </div>
-                    <div id="cart-box" class="col-2 mt-3 cartBox p-3">
+                    <div id="cart-box" class="col-xl-2 col-md-3 col-3 mt-3 cartBox p-3">
                     </div>
                     <div id="modal-box">
                     </div>
@@ -88,24 +88,24 @@
         <!--/Page Body-->
      <footer class="footer ml-2">
         <div class="row">
-            <div class="col-4 align-items-center">
+            <div class="col-5 align-items-center">
                 <h5 id="contact-us" class="m-2">Contactanos</h5>
              <div class="m-1">
-                <i><img src="/images/whatsapp.svg" alt="whatsapp" width="20px"></i>
+                <i><img src="/images/whatsapp.svg" alt="whatsapp" width="20px" class="footer-icons"></i>
                  <a class="p-2 text-footer" href="#">1555111111</a>
              </div>
              <div class="m-1">
-                <i><img src="/images/email.svg" alt="whatsapp" width="20px"></i>
-                 <a class="p-2 text-footer" href="#">teoremamusical@example.com</a>
+                <i><img src="/images/email.svg" alt="email" width="20px" class="footer-icons"></i>
+                 <a class="p-lg-2 p-md-2 p-0 text-footer" href="#">teoremamusical@example.com</a>
              </div>
              <p id="note" class="">*Todos los datos de contacto son ficticios, a modo de ilustración.</p>
             </div>
              <div class="col-6 m-1">
                 <div class="mb-3 align-items-center">
-                <i><img class="p-1" src="/images/mapa.svg" width="30px" alt="mapa"/></i>
+                <i><img src="/images/mapa.svg" width="30px" alt="mapa" class="footer-icons"/></i>
                 <a href="https://goo.gl/maps/mLS7TAWfdS3wq7nv7" class="text-footer" id="adress"> Boulogne Sur Mer 120, B1617CED Gran Buenos Aires, Buenos Aires</a>
                 </div>
-                <iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.684683751329!2d-58.52320798476807!3d-34.687906780437814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc8cff2220f8b%3A0xdaa23699cae11f56!2sAv.%20Boulogne%20Sur%20Mer%20120%2C%20B1766FXB%20La%20Tablada%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1599504863137!5m2!1ses-419!2sar" width="500" height="100" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.684683751329!2d-58.52320798476807!3d-34.687906780437814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc8cff2220f8b%3A0xdaa23699cae11f56!2sAv.%20Boulogne%20Sur%20Mer%20120%2C%20B1766FXB%20La%20Tablada%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1599504863137!5m2!1ses-419!2sar" width="500" height="100" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
              </div>
         </div>
         </footer>

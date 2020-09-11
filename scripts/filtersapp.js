@@ -12,15 +12,15 @@ buildHtmlFilter = function(filter) {
         <h1 class="ppalheadings">Filtros</h1>
         <section id="filters">
         <div id="brand">
-            <h4 class="sndheadings">Marca</h4>
+            <h4 class="sndheadings mb-3">Marca</h4>
         <ul class="list">${buildBrand()}</ul>
         </div>
         <div id="keys">
-            <h4 class="sndheadings">Teclas</h4>
+            <h4 class="sndheadings mb-3">Teclas</h4>
         <ul class="list">${buildKeys()}</ul>
         </div>
         <div id="tunes">
-            <h4 class="sndheadings">Tonos</h4>
+            <h4 class="sndheadings mb-3">Tonos</h4>
         <ul class="list">${buildTunes()}</ul>
         </div>
         </section> 

@@ -44,8 +44,8 @@ function ShoppingCart() {
         var html = '';
         this.cart.forEach(product => {
             html = html + ` <div class="row align-items-center">
-                            <li class="col p-1 m-1"><strong>${ product.title }</strong></li>
-                            <li class="col p-1 m-1">$${ product.price }</li>
+                            <li class="col p-0 "><strong>${ product.title }</strong></li>
+                            <li class="col p-0 ">$${ product.price }</li>
                             <li><button type="button" class="close" aria-label="Close" onclick="lessProduct('${product.id}')">
                             <span aria-hidden="true">&times;</span>
                           </button>
@@ -66,11 +66,11 @@ function ShoppingCart() {
                      ${ this.buildList()}
                 </ul>
                 <div id="msg-empty-cart">
-                <p class="text-center">Aún no tienes nada cargado en el carrito. Selecciona algún producto.</p>
+                <p class="text-center msg-empty-cart ">Aún no tienes nada cargado en el carrito. Selecciona algún producto.</p>
                 </div>
                 <div id="price" class="row m-3 p-0 align-items-center justify-content-center">
-                <li class=" list p-1 m-1"><h6><strong>Total: </strong></h3></li>
-                <li class=" list p-1"><h6 id="total-price">$${totalPrice}</h6></li>
+                <li class="list p-1 m-1"><h6 class="cart-total-price"><strong>Total: </strong></h3></li>
+                <li class=" list p-1"><h6 id="total-price" class="cart-total-price">$${totalPrice}</h6></li>
                 </div>
                 <div id="cartButtons" class="cartButtons align-items-center justify-content-center">
                 <button id="cancel-btn" type="button" class="btn btn-link cancel p-1 m-1" value="" onclick="emptyCart()">Cancelar</button>
@@ -87,8 +87,8 @@ function ShoppingCart() {
         this.cart.forEach(product => {
             html = html + ` 
             <ul class="row align-items-top list">
-            <li class="col p-1 m-1"><strong>${ product.title }</strong></li>
-            <li class="col p-1 m-1">$${ product.price }</li>
+            <li class="col modal-item-list p-1 m-1"><strong>${ product.title }</strong></li>
+            <li class="col modal-item-list p-1 m-1">$${ product.price }</li>
             </ul>
                         `;
         });
@@ -100,12 +100,14 @@ function ShoppingCart() {
         container.innerHTML = "";
         var html = `
         <h5><strong>Tu Compra</strong></h5>
+        <div class="justify-content-center">
         <div id="shop-selection" class="align-items-left">
             ${ this.buildListModal()}
         </div>    
-        <div id="total-price" class=" total-price row m-3 p-0 align-items-center justify-content-center">
+        <div id="modal-price" class="row m-3 p-0 align-items-center justify-content-center">
              <li class=" list p-1 m-1"><h6><strong>Total: </strong></h3></li>
              <li class=" list p-1"><h6 id="total-price-modal">$${totalPrice}</h6></li>
+        </div>
         </div>
         `
         container.innerHTML = html;

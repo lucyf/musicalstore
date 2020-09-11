@@ -69,6 +69,8 @@ function addToCart(id){
 function emptyCart(){
         localStorage.clear();
         shoppingCart.cancel();
+        $('#price').hide();
+        $('#cartButtons').hide();
 }
 
 function getProductList(){
